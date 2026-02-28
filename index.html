@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site web</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Mon site web</h1>
+        <p>Portfolio & CV en ligne</p>
+    </header>
+
+    <nav>
+        <button onclick="showsection('acceuil')">Acceuil</button>
+        <button onclick="showsection('apropos')">A propos</button>
+        <button onclick="showsection('Cours')">Cours</button>
+        <button onclick="showsection('projets')">Projets</button>
+        <button onclick="showsection('contact')">Contact</button>
+    </nav>
+
+    <!-- ACCEUIL -->
+     <div id="acceuil" class="section active">
+        <h2>Bienvenue</h2>
+        <p>Bonjour, je suis étudiant en informatique.</p>
+     </div>
+
+     <!-- A PROPOS (cv) -->
+     <div id="apropos" class="section">
+        <h2>Mon CV</h2>
+        <div class="card">
+            <img src="Fanilo.png" alt="photo-container">
+            <p><strong>Nom :</strong> Fanilo christien R.</p>
+            <P><strong>Niveau :</strong> Licence en Informatique</P>
+            <p><strong>Compétences :</strong> HTML, CSS, JS,DACTILOGRAPHY</p>
+            <P><strong>Langues :</strong> Français, Malagasy, Anglais</P>
+        </div>
+     </div>
+
+     <!-- COURS -->
+      <div id="cours" class="section">
+        <h2>Mes Cours</h2>
+        <div class="card">
+            <p>HTML - Structure des sites web</p>
+        </div>
+        <div class="card">
+            <p>CSS - Desing et mise en forme</p>
+        </div>
+        <div class="card">
+            <p>JavaScript - Interaction dynamique</p>
+        </div>
+      </div>
+
+      <!-- PROJETS -->
+       <div id="projets" class="section">
+        <h2>Mes Projets</h2>
+        <div class="card">
+            <p>CV en ligne</p>
+        </div>
+        <div class="card">
+            <p>Mni site vitrine</p>
+        </div>
+       </div>
+
+       <!-- CONTACT -->
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="card">
+                <p>Email : fanilochristien@gmail.com</p>
+            <p>Téléphone : +261 38 22 456 54</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 - Site Étudiant</p>
+        </footer>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body{
+                background: #f4f6f9;
+            }
+
+            header{
+                background: #2c3e50;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            nav{
+                background: #34495e;
+                text-align: center;
+                padding: 20px;
+            }
+
+            nav button{
+                background: none;
+                border: none;
+                color: white;
+                font-size: 16px;
+                margin: 10px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            nav button:hover{
+                color: #f1c40f;
+            }
+
+            .section{
+                display: none;
+                padding: 40px;
+                text-align: center;
+            }
+
+            .active{
+                display: block;
+            }
+
+            .card{
+                background: white;
+                padding: 20px;
+                margin: 20px auto;
+                width: 300px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .card img{
+                border: 15px;
+                border-radius: 50px;
+                box-sizing: border-box;
+                height: 150px;
+            }
+
+            footer{
+                background: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                margin-top: 30px;
+            }
+        </style>
+
+        <script>
+            function showsection(sectionId){
+                let sections = document.querySelectorAll('.section');
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                document.getElementById(sectionId).classList.add('active');
+            }
+        </script>
+</body>
+</html>
